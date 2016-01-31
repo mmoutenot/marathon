@@ -10,8 +10,6 @@ import React, {
 } from 'react-native';
 import Beacons from 'react-native-ibeacon';
 
-StatusBarIOS.setHidden(true);
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -59,6 +57,7 @@ export default function native(platform) {
     }
 
     render() {
+      StatusBarIOS.setHidden(true);
       return (
         <View style={styles.container}>
           <Text style={styles.nextText}>Next</Text>
